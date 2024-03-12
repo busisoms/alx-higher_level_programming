@@ -12,4 +12,3 @@ def remove_char_at(str, n):
     for i in ls:
         n_str += i
     return n_str
-
