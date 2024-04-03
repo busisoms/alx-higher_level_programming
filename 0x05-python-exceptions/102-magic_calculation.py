@@ -16,7 +16,7 @@ def custom_function(a, b):
             if i > a:
                 raise Exception('Too far')
             result += (a ** b) / i
-        except:
+        except ValueError:
             result += a + b
             break
 
