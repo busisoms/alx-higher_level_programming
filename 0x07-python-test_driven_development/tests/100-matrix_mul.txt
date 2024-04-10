@@ -1,0 +1,48 @@
+===================
+matrix_mul
+===================
+
+Multiplies two matrices.
+
+How to use ``matrix_mul``
+==========================
+
+# import matrix_mul
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# Test when m_a is not a list
+>>> matrix_mul(123, [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a must be a list
+
+# Test when m_b is not a list of lists
+>>> matrix_mul([[1, 2], [3, 4]], 123)
+Traceback (most recent call last):
+    ...
+TypeError: m_b must be a list
+
+# Test when m_a or m_b is empty
+>>> matrix_mul([], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a can't be empty
+
+# Test when one element of m_a or m_b is not an integer or float
+>>> matrix_mul([[1, 2], [3, 'a']], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a should contain only integers or floats
+
+# Test when each row of m_a or m_b is not of the same size
+>>> matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_a must be of the same size
+
+# Test normal conditions
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+[[19, 22], [43, 50]]

@@ -1,0 +1,57 @@
+=================
+2-matrix_divided
+=================
+
+matrix_divided divides all elements of a matrix by 1 div
+and returns a new_matrix
+
+How to use matrix_divided
+==========================
+
+# First import 2-matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+
+# Test when matrix is not a matrix
+>>> my_list = [1 ,2 ,3 ,4]
+>>> matrix_divided(my_list, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test when matrix contains mixed elements
+>>> matrix = [[1, 2, "r", 4],["a" ,1.4 ,12]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 1.2, 3, 5], [2, 3, 5.1, 4]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 0.6, 1.5, 2.5], [1.0, 1.5, 2.55, 2.0]]
+
+# Test when number of elements in each row are equal
+>>> matrix = [[1, 2, 4, 5], [2, 4, 5]]
+>>> matrix_divided(matrix, 4)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Test when div is not a number
+>>> matrix = [[1, 2, 4, 5], [2, 4, 5, 3]]
+>>> matrix_divided(matrix, "b")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Test when div is 0
+>>> matrix = [[1, 1.2, 3, 5], [2, 3, 5.1, 4]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# Test normal conditions
+>>> matrix = [[1, 2, 4, 5], [2, 4, 5, 3]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.33, 1.67], [0.67, 1.33, 1.67, 1.0]]

@@ -1,0 +1,29 @@
+===================
+text_indentation
+===================
+
+Prints a text with 2 new lines after each of these characters: ., ? and :
+
+How to use ``text_indentation``
+===============================
+
+# import text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test when text is not a string
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Test normal conditions
+>>> text_indentation("This is a sentence. This is another sentence? And a third one: This is the end.")
+This is a sentence.
+<BLANKLINE>
+This is another sentence?
+<BLANKLINE>
+And a third one:
+<BLANKLINE>
+This is the end.
+<BLANKLINE>
+<BLANKLINE>

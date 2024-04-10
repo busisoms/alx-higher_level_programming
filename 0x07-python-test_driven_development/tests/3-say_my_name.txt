@@ -1,0 +1,37 @@
+=============
+say_my_name
+=============
+
+say_my_name prints "My name is <first name> <last name>
+
+How to use
+===========
+
+# First import ``say_my_name``
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>>
+
+# Test when first_name and last name are given
+>>> say_my_name("Will", "Smith")
+My name is Will Smith
+
+# Test when first_name is only given
+>>> say_my_name("Nelson")
+My name is Nelson
+
+# Test when None is passed in both positional arguments
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test when first_name or last_name is not a str
+>>> say_my_name(2, "Ndlovu")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Wendy", 9)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string

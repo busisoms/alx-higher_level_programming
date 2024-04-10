@@ -1,0 +1,40 @@
+==============
+print_square
+==============
+
+Prints a square with the character #
+
+How to use ``print_square``
+===========================
+
+# import print_square
+>>> print_square = __import__('4-print_square').print_square
+
+# Test when size is not a an int
+>>> print_square("3")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> print_square(1.2)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> print_square(0.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+
+# Test when size is less than zero
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Test normal conditions
+>>> print_square(3)
+###
+###
+###

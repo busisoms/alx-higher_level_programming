@@ -1,0 +1,55 @@
+=========================
+0-add_integer
+=========================
+
+add_integer adds two integers and returns
+the sum of a and b
+
+How to use `` add_integer``
+==========================
+# first import module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(3, 5)
+8
+
+# Test adding a positive integer and a negative integer
+>>> add_integer(10, -5)
+5
+
+# Test adding two negative integers
+>>> add_integer(-10, -5)
+-15
+
+# Test adding two floats
+>>> add_integer(3.5, 2.5)
+5
+
+# Test adding an integer and a float
+>>> add_integer(7, 3.0)
+10
+
+>>> add_integer(4.0, 6)
+10
+
+# Test when 1 arg is given
+>>> add_integer(1,)
+99
+
+>>> add_integer(,2)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
+
+# Test adding two non-numeric values (should raise a TypeError)
+>>> add_integer("Hello", "World")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# Test adding an integer and a non-numeric value (should raise a TypeError)
+>>> add_integer(7, "Hello")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
